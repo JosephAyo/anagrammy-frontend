@@ -37,7 +37,6 @@ const ActionButton = ({ text, ...rest }: IActionButton) => {
   return (
     <Button
       fontWeight="semibold"
-      // fontSize="20px"
       fontSize={[14, 20]}
       height="64px"
       width="170px"
@@ -73,9 +72,7 @@ export default function Home() {
       <Center height="100%">
         {game && (
           <VStack spacing="70px">
-            <Box
-              //  width="454px"
-              w={[300, 454]}>
+            <Box width={[300, 454]}>
               <HStack justifyContent="space-between">
                 <HStack>
                   <HStack spacing="5px">
@@ -113,7 +110,7 @@ export default function Home() {
                     height="10px"
                     borderRadius="27px"
                     left="4px !important"
-                    maxWidth="446px"
+                    maxW={[292, 446]}
                   />
                 </SliderTrack>
               </Slider>
@@ -122,30 +119,18 @@ export default function Home() {
               outline="3px solid #000000"
               borderWidth="6px"
               borderColor="actionSecondary.default"
-              // height="195px"
               height={[160, 195]}
-              // width="324px"
               width={[300, 324]}
               borderRadius="28px"
               boxShadow="inset 0px 0px 0px 3px black">
               {checkIfGameIsCompleted() ? (
-                <Text
-                  // fontSize="30px"
-                  fontSize={[22, 30]}>
-                  Game complete
-                </Text>
+                <Text fontSize={[22, 30]}>Game complete</Text>
               ) : (
-                question && (
-                  <Text
-                    // fontSize="30px"
-                    fontSize={[22, 30]}>
-                    {question.word.word}
-                  </Text>
-                )
+                question && <Text fontSize={[22, 30]}>{question.word.word}</Text>
               )}
             </Center>
 
-            <Box w={[300, 400, 558]}>
+            <Box width={[300, 400, 558]}>
               {!checkIfGameIsCompleted() && (
                 <Input
                   height={[50, 64]}
@@ -154,7 +139,6 @@ export default function Home() {
                   border="none"
                   textAlign="center"
                   placeholder="Enter your anagram"
-                  // fontSize="25px"
                   fontSize={[18, 25]}
                   _focusVisible={{ outlineColor: 'actionSecondary.default' }}
                   value={inputState}
