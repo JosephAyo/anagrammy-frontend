@@ -130,10 +130,10 @@ export default function Home() {
               )}
             </Center>
 
-            <Box width={[300, 400, 558]}>
+            <Box width={[300, 454]}>
               {!checkIfGameIsCompleted() && (
                 <Input
-                  height={[50, 64]}
+                  height={[50]}
                   borderRadius="16px"
                   backgroundColor="#000000"
                   border="none"
