@@ -5,11 +5,10 @@ This is the frontend application for anagrammy
 
 ### 1. Clone repo
 ```
-git clone https://github.com/JosephAyo/anagrammy-frontend
+git clone https://github.com/JosephAyo/anagrammy-frontend && cd anagrammy-frontend
 ```
 ### 2. Install dependencies
 ```
-cd anagrammy-frontend
 yarn install
 ```
 ## 3. build the application.
