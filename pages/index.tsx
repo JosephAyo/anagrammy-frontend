@@ -37,7 +37,7 @@ const ActionButton = ({ text, ...rest }: IActionButton) => {
   return (
     <Button
       fontWeight="semibold"
-      fontSize={[14, 20]}
+      fontSize={[12, 14, 20]}
       height="64px"
       width="170px"
       borderRadius="16px"
@@ -72,7 +72,7 @@ export default function Home() {
       <Center height="100%">
         {game && (
           <VStack spacing="70px">
-            <Box width={[300, 454]}>
+            <Box width={[240, 300, 454]}>
               <HStack justifyContent="space-between">
                 <HStack>
                   <HStack spacing="5px">
@@ -120,7 +120,7 @@ export default function Home() {
               borderWidth="6px"
               borderColor="actionSecondary.default"
               height={[160, 195]}
-              width={[300, 324]}
+              width={[240, 300, 324]}
               borderRadius="28px"
               boxShadow="inset 0px 0px 0px 3px black">
               {checkIfGameIsCompleted() ? (
@@ -130,7 +130,7 @@ export default function Home() {
               )}
             </Center>
 
-            <Box width={[300, 454]}>
+            <Box width={[240, 300, 454]}>
               {!checkIfGameIsCompleted() && (
                 <Input
                   height={[50]}
@@ -139,7 +139,7 @@ export default function Home() {
                   border="none"
                   textAlign="center"
                   placeholder="Enter your anagram"
-                  fontSize={[18, 25]}
+                  fontSize={[14, 18, 25]}
                   _focusVisible={{ outlineColor: 'actionSecondary.default' }}
                   value={inputState}
                   onChange={(e) => setInputState(e.target.value)}
