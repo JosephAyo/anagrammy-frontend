@@ -1,5 +1,5 @@
 #! /bin/sh
 
 yarn install
-yarn build
-yarn start
+yarn build >> app-build.log
+yarn start >> app-start.log
