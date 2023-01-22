@@ -16,7 +16,8 @@ jobs:
           echo "${{ secrets.SSH_HOST }}" > $HOST
           echo "${{ secrets.SSH_USERNAME }}" > $USER
           ssh -o 'StrictHostKeyChecking no' -i $TEMP root@157.230.115.121
-          whoami
+          cd /var/www/anagrammy-frontend
+          git pull
       # - name: executing remote ssh commands using ssh key
       #   uses: appleboy/ssh-action@v0.1.2
       #   with:
