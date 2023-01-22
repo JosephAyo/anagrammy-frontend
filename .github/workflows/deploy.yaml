@@ -18,6 +18,5 @@ jobs:
             echo "Actions was here"
             cd /var/www/anagrammy-frontend
             git pull
-            yarn install
-            yarn build
-            yarn start
+            exec bash \-l
+            ./deploy.sh
