@@ -15,7 +15,7 @@ jobs:
       - name: Install the deploy key
         run: echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/deploy && chmod 600 ~/.ssh/deploy
       - name: deploy the book
-        run: ssh -i ~/.ssh/deploy root@157.230.115.121
+        run: ssh -i -tt ~/.ssh/deploy root@157.230.115.121
       # - name: Deploy
       #   run: |
       #     TEMP=$(mktemp)
