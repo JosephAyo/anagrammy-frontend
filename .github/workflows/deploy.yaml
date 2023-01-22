@@ -7,17 +7,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      # - name: Deploy
-      #   run: |
-      #     TEMP=$(mktemp)
-      #     HOST=$(mktemp)
-      #     USER=$(mktemp)
-      #     echo "${{ secrets.SSH_KEY }}" > $TEMP
-      #     echo "${{ secrets.SSH_HOST }}" > $HOST
-      #     echo "${{ secrets.SSH_USERNAME }}" > $USER
-      #     ssh -o 'StrictHostKeyChecking no' -i $TEMP root@157.230.115.121
-      #     cd /var/www/anagrammy-frontend
-      #     git pull
       - name: executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@v0.1.7
         with:
@@ -29,3 +18,6 @@ jobs:
             echo "Actions was here"
             cd /var/www/anagrammy-frontend
             git pull
+            yarn install
+            yarn build
+            yarn start
