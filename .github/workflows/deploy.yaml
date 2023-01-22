@@ -27,3 +27,5 @@ jobs:
           script: |
             whoami
             echo "Actions was here"
+            cd /var/www/anagrammy-frontend
+            git pull
