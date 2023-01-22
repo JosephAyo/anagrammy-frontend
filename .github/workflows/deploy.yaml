@@ -18,5 +18,4 @@ jobs:
             echo "Actions was here"
             cd /var/www/anagrammy-frontend
             git pull
-            exec bash \-l
-            ./deploy.sh
+            exec bash ./deploy.sh         
